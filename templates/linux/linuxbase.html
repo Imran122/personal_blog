@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Itech-Verse | Linux</title>
+    <!-- Site Metas -->
+    <title>{{ linuxpost.title }} </title>
+    <meta name="descriptions" content="{{ linuxpost.overview }}">
+    <meta name="keywords" content="{{ linuxpost.seo_keywords }}">
+    <meta name="og:{{linuxpost.title}}" property="og:{{linuxpost.title}}" content={{linuxpost.overview }}>
+    <meta property="og:image" content="{{ linuxpost.thumbnail.url }}" />
+    <!-- Site Icons -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    <!-- Design fonts -->
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700' %}" rel="stylesheet"> 
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+ <link href="{% static 'css/mycustom.css' %}" rel="stylesheet">
+    <!-- Responsive styles for this template -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="{% static 'css/colors.css' %}" rel="stylesheet">
+
+    <!-- Version Garden CSS for this template -->
+    <link href="{% static 'css/version/garden.css' %}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="{% static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js' %}"></script>
+      <script src="{% static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js' %}"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<div id="wrapper">
+  {% include 'partials/navbar.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+   {% block content %}
+
+   {% endblock %}
+
+  <!--footer part -->
+  {% include 'partials/footer.html' %}
+
+
+
+
+
+ </div><!-- end wrapper -->
+
+
+
+
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+     <!-- <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>      -->
+    <script src="{% static 'js/tether.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

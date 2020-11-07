@@ -1,0 +1,70 @@
+{% load static %}
+<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+    <hr class="invis1">
+                        <div class="sidebar">
+                            <div class="widget">
+                                <h2 class="widget-title">Search</h2>
+                                <form action="{% url 'search' %}" class="form-inline search-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search post">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div><!-- end widget -->
+
+
+                            <div class="widget">
+                                <h2 class="widget-title">Advertising</h2>
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="{% static 'upload/banner_04.jpg' %}" alt="" class="img-fluid">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end widget -->
+
+                            
+
+                            <div class="widget">
+                                <h2 class="widget-title">Recent Posts</h2>
+                                <div class="blog-list-widget">
+                                    <div class="list-group">
+                                     {% for post in most_recent %}
+                                        <a href="{{ post.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <img src="{{ post.thumbnail.url }}" alt="" class="img-fluid float-left">
+                                                <h5 class="mb-1">{{ post.title }}</h5>
+                                                <small><i class="fa fa-eye"></i> {{ post.view_count }}</small> | 
+                                                <small>{{post.timestamp|timesince}} ago</small>
+                                                
+                                            </div>
+                                        </a>
+
+                                        {% endfor %}
+  
+                                    </div>
+                                </div><!-- end blog-list -->
+                            </div><!-- end widget -->
+
+
+
+
+
+
+
+                            <div class="widget">
+                                <h2 class="widget-title">Popular Categories</h2>
+                                <div class="link-widget">
+                                    <ul>
+                                     {% for cat in categorey_count %}
+                                        <li><a href="{% url "category_blog" cat.categories__id %}">{{ cat.categories__title }} <span>({{ cat.categories__title__count }})</span>
+
+                                        </a>
+                                        
+                                        </li>
+                                 
+                                         {%endfor %}
+                                    </ul>
+                                </div><!-- end link-widget -->
+                            </div><!-- end widget -->
+                        </div><!-- end sidebar -->
+                    </div><!-- end col -->

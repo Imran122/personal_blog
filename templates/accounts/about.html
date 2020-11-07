@@ -1,0 +1,62 @@
+<title>Itech-Verse | About </title>
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section id="about">
+ 		
+	<div class="container">
+		<div class="row">
+		<div class="col-md-5">
+                <div class="img-warp">
+                    <img src="{% static 'images/about.JPG' %}">
+                </div>
+		</div>
+		<br>
+		<div class="col-md-7 about-right">
+			
+			<h2 class="color-3"><b>About Me</b>
+			</h2>
+			
+			<p class="p-first text-white">
+I am a professional web designer, Developer with a year of experience and can build a website according to the latest web standards.
+ Also, have experience in machine learning. I love to share my knowledge through the blog and  If you are a developer then you are in the right place.
+  Here you will get all technical knowledge about developing. I believe no one should feel stuck trying to figure out how to do this programming on their own. 
+You need a community and support system to help you along the way and I am with you.
+			</p>
+			<p class="text-white">
+			This immediately unveils to you what this blog is all about without wasting a minute of your time.
+			</p>
+			<h3 class="color-3 social-link-text">
+				<a href="{% url 'contact' %}"> Hire Me</a>
+			</h3>
+			
+			<ul class="about-link">
+				<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+				
+				<li><a href="#"><i class="fa fa-github"></i></a></li>
+				
+				
+				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+				
+				
+				<li><a href="{% url 'contact' %}"><i class="fa fa-address-card"></i></a></li>
+				
+				
+				<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+		 
+			</ul>
+		 
+			
+		</div>
+	 
+		</div>
+	</div>
+  
+ 	</section>
+
+
+
+
+
+{% endblock %}

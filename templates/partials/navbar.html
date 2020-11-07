@@ -1,0 +1,46 @@
+{% load static %}
+
+   
+
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+               
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}"><img style=" height:50px; margin-left:-60px;"  src="{% static 'images/version/logo1.png' %}" alt=""></a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'index' %}">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'blog' %}">Python</a>
+                            </li>                   
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'linuxpost' %}">Linux</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'django' %}">Django</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mr-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- end container-fluid -->
+        </header><!-- end market-header -->

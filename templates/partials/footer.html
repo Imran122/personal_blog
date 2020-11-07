@@ -1,0 +1,69 @@
+{% load static %}
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="widget">
+                            <div class="footer-text text-left">
+                                <a href="index.html"><img style=" height:50px; margin-left:-70px;" src="{% static 'images/version/tech-footer-logo.png' %}" alt="" class="img-fluid"></a>
+                                <p>ITechVerse Blog is a technology blog, we share developing articles, news and technological articles.</p>
+                                <div class="social">
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="GitHub"><i class="fa fa-github"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                </div>
+
+                                <hr class="invis">
+
+                                <div class="newsletter-widget text-left">
+                                    <form class="form-inline" action="." method="POST">
+                                     {% csrf_token %}
+                                        <input type="text" name="email" class="form-control" placeholder="Enter your email address">
+                                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                    </form>
+                                </div><!-- end newsletter -->
+                            </div><!-- end footer-text -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <h2 class="widget-title">Popular Categories</h2>
+                            <div class="link-widget">
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About Me<span></span></a></li>
+                                    <li><a href="{% url 'privacy' %}">Privacy &amp; Policy <span></span></a></li>
+                                    <li><a href="{% url 'contact' %}">Contact <span></span></a></li>
+                                    <li><a href="{% url 'contact' %}">FAQ<span></span></a></li>
+                                    <li><a href="{% url 'index' %}">Blogging <span></span></a></li>
+                                </ul>
+                            </div><!-- end link-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <h2 class="widget-title">Copyrights</h2>
+                            <div class="link-widget">
+                                <ul>
+                                    
+                                    <li><a href="{% url 'contact' %}">Advertising</a></li>
+                                    <li><a href="{% url 'contact' %}">Write for me</a></li>
+                                    
+                                    
+                                </ul>
+                            </div><!-- end link-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <br>
+                        <div class="copyright">&copy; ItechVerse Blog. <a href="#">By Imran Hossain</a>.</div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </footer><!-- end footer -->
